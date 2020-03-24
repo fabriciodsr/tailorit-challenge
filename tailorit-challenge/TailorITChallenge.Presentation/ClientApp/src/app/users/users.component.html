@@ -1,0 +1,68 @@
+<div class="row mb-3">
+  <div class="col-md-6">
+    <h1>Lista de Usuários</h1>
+  </div>
+  <div class="col-md-6">
+    <p>
+      <a [routerLink]="['/add']" class="btn btn-success float-right mb-3">
+        <i class="fa fa-plus"></i> Novo usuário
+      </a>
+    </p>
+  </div>
+</div>
+
+<p *ngIf="!(users$ | async)"><em>Loading...</em></p>
+
+<div class="row mb-1">
+  <div class="col-md-7"></div>
+  <div class="col-md-2 font-weight-bold mt-1">
+    <input type="checkbox" #somenteAtivos (change)="reloadUsers()"> Somente Ativos
+  </div>
+  <div class="col-md-3">
+    <input type="text" class="form-control float-right" placeholder="Pesquisar" #searchBox (keyup)="reloadUsers()">
+  </div>
+</div>
+
+<table class="table table-sm table-hover" *ngIf="(users$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Data de Nascimento</th>
+      <th>E-mail</th>
+      <th>Sexo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of (users$ | async)">
+      <td>{{ user.id }}</td>
+      <td><a [routerLink]="['/user/', user.id]">{{ user.name }}</a></td>
+      <td>{{ user.birthDate | date: "dd/MM/yyyy" }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.gender.description }}</td>
+      <td *ngIf="user.active == false" style="text-align: center;">
+        <a [routerLink]="" (click)="update(user.id)" class="btn btn-success btn-sm float-right">
+          <i class="fa fa-unlock"></i> Ativar
+        </a>
+      </td>
+      <td *ngIf="user.active == true" style="text-align: center;">
+        <a [routerLink]="" (click)="update(user.id)" class="btn btn-danger btn-sm float-right">
+          <i class="fa fa-lock"></i> Desativar
+        </a>
+      </td>
+      <td>
+        <a [routerLink]="['/user/edit/', user.id]" class="btn btn-primary btn-sm float-right">
+          <i class="fa fa-pencil"></i> Editar
+        </a>
+      </td>
+      <td>
+        <a [routerLink]="" (click)="delete(user.id)" class="btn btn-dark btn-sm float-right">
+          <i class="fa fa-trash"></i> Deletar
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

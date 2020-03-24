@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{01C164FB-AC7D-4017-9B1A-8D35987FE4A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{4F7D2A24-1CB0-4A1D-A9AA-ED8D869AED4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{501B1547-E17A-4E65-9B75-3C0E4BCC9A60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{95396206-7791-4F14-9E1D-117A9982ACA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{5EF66685-3A36-4952-B615-150E8121717C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{695848AA-1D27-4C54-AA5A-7F6A5E28C404}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailorITChallenge.Domain", "tailorit-challenge\TailorITChallenge.Domain\TailorITChallenge.Domain.csproj", "{3C042E82-7B30-43EC-83B2-25AF1F6EB741}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailorITChallenge.Infra.Data", "tailorit-challenge\TailorITChallenge.Infra\TailorITChallenge.Infra.Data\TailorITChallenge.Infra.Data.csproj", "{053DF470-EED0-4326-AD76-7ABF6D3D29BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailorITChallenge.Infra.IoC", "tailorit-challenge\TailorITChallenge.Infra\TailorITChallenge.Infra.IoC\TailorITChallenge.Infra.IoC.csproj", "{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailorITChallenge.Application", "tailorit-challenge\TailorITChallenge.Application\TailorITChallenge.Application.csproj", "{83750E8D-FA2A-4C0F-8657-A9A9D3631915}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailorITChallenge.Presentation", "tailorit-challenge\TailorITChallenge.Presentation\TailorITChallenge.Presentation.csproj", "{C1CAC504-B4AD-483E-835F-BD971528CBC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C042E82-7B30-43EC-83B2-25AF1F6EB741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C042E82-7B30-43EC-83B2-25AF1F6EB741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C042E82-7B30-43EC-83B2-25AF1F6EB741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C042E82-7B30-43EC-83B2-25AF1F6EB741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053DF470-EED0-4326-AD76-7ABF6D3D29BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053DF470-EED0-4326-AD76-7ABF6D3D29BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053DF470-EED0-4326-AD76-7ABF6D3D29BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053DF470-EED0-4326-AD76-7ABF6D3D29BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83750E8D-FA2A-4C0F-8657-A9A9D3631915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83750E8D-FA2A-4C0F-8657-A9A9D3631915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83750E8D-FA2A-4C0F-8657-A9A9D3631915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83750E8D-FA2A-4C0F-8657-A9A9D3631915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1CAC504-B4AD-483E-835F-BD971528CBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CAC504-B4AD-483E-835F-BD971528CBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CAC504-B4AD-483E-835F-BD971528CBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CAC504-B4AD-483E-835F-BD971528CBC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5EF66685-3A36-4952-B615-150E8121717C} = {95396206-7791-4F14-9E1D-117A9982ACA8}
+		{695848AA-1D27-4C54-AA5A-7F6A5E28C404} = {95396206-7791-4F14-9E1D-117A9982ACA8}
+		{3C042E82-7B30-43EC-83B2-25AF1F6EB741} = {501B1547-E17A-4E65-9B75-3C0E4BCC9A60}
+		{053DF470-EED0-4326-AD76-7ABF6D3D29BA} = {5EF66685-3A36-4952-B615-150E8121717C}
+		{B8F3D0B0-B2D3-42F4-90F7-7238CB0B827C} = {695848AA-1D27-4C54-AA5A-7F6A5E28C404}
+		{83750E8D-FA2A-4C0F-8657-A9A9D3631915} = {4F7D2A24-1CB0-4A1D-A9AA-ED8D869AED4D}
+		{C1CAC504-B4AD-483E-835F-BD971528CBC9} = {01C164FB-AC7D-4017-9B1A-8D35987FE4A8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2542088D-1EA2-432A-BABD-37BB1A6DF936}
+	EndGlobalSection
+EndGlobal

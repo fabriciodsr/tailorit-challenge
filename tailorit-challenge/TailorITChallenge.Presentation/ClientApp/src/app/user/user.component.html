@@ -1,0 +1,41 @@
+<h1>Detalhes do Usuário</h1>
+
+<ng-container *ngIf="(user$ | async) as user; else loading">
+    <div class="form-group row">
+        <label class=" control-label col-md-12 font-weight-bold">Nome</label>
+        <div class="col-md-6">
+          <input class="form-control" type="text" value="{{ user.name }}" disabled>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class=" control-label col-md-12 font-weight-bold">Data de Nascimento</label>
+        <div class="col-md-3">
+          <input class="form-control" type="datetime" value="{{ user.birthDate | date: 'dd/MM/yyyy' }}" disabled>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class=" control-label col-md-12 font-weight-bold">E-mail</label>
+        <div class="col-md-6">
+          <input class="form-control" type="text" value="{{ user.email }}" disabled>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class=" control-label col-md-12 font-weight-bold">Sexo</label>
+        <div class="col-md-3">
+          <select class="form-control" disabled>
+            <option value="1" *ngIf="user.genderId == 1">Masculino</option>
+            <option value="2" *ngIf="user.genderId == 2">Feminino</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class=" control-label col-md-12 font-weight-bold">Ativo</label>
+        <div class="col-md-3">
+          <select class="form-control" disabled>
+            <option value="true" *ngIf="user.active == true">Sim</option>
+            <option value="false" *ngIf="user.active == false">Não</option>
+          </select>
+        </div>
+      </div>
+  </ng-container>
+  <ng-template #loading>Loading…</ng-template>
